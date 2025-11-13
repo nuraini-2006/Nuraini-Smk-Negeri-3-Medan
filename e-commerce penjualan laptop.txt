@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-Commerce Laptop Online</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f6f6f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #9880b2;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #070707;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav a {
+      color: rgb(252, 247, 247);
+      padding: 15px 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover, nav a.active {
+      background-color: #201f1f;
+    }
+
+    section {
+      display: none;
+      padding: 20px;
+      background: rgb(212, 188, 210);
+      margin: 20px auto;
+      max-width: 900px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    section.active {
+      display: block;
+    }
+
+    h2 {
+      color: #000000;
+    }
+
+    .laptop-list {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .laptop-item {
+      background: #f1f5f9;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      width: 250px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .laptop-item img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .btn {
+      background-color: #6577aa;
+      color: white;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background-color: #1858e2;
+    }
+
+    .btn-back {
+      background-color: #927295;
+      color: white;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 25px;
+    }
+
+    .btn-back:hover {
+      background-color: #ac8cc7;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #c79fd6;
+      color: white;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #9880b2;
+      color: white;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>💻 E-Commerce MacBook Online</h1>
+    <p>Selamat datang di toko MacBook Aini. Pilih laptop favorit Anda dengan harga terbaik!</p>
+  </header>
+
+  <nav>
+    <a href="#" class="active" onclick="showPage('beranda', this)">Beranda</a>
+    <a href="#" onclick="showPage('harga', this)">Harga Laptop</a>
+    <a href="#" onclick="showPage('profil', this)">Profil Penjual</a>
+    <a href="#" onclick="showPage('alamat', this)">Alamat Toko</a>
+  </nav>
+
+  <!-- BERANDA -->
+  <section id="beranda" class="active">
+    <h2>Daftar Laptop Unggulan</h2>
+    <div class="laptop-list">
+      <div class="laptop-item">
+        <img src="https://bestshop.ee/wp-content/uploads/2025/03/apple-macbook-air-15in-m4.png" alt="Laptop Snapdragon">
+        <h3>MacBook Air 13</h3>
+        <button class="btn" onclick="showPage('harga', document.querySelector('nav a:nth-child(2)'))">Lihat Harga</button>
+      </div>
+      <div class="laptop-item">
+        <img src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/MTA-165585640/apple_macbook_air_-15_inci-_m3-_8_gb-_full25_qhl9rn99.jpeg" alt="ASUS Zephyrus G14">
+        <h3>MacBook Air 15</h3>
+        <button class="btn" onclick="showPage('harga', document.querySelector('nav a:nth-child(2)'))">Lihat Harga</button>
+      </div>
+      <div class="laptop-item">
+        <img src="https://macstore.id/wp-content/uploads/2024/11/mbp14-silver-gallery1-202410.jpeg" alt="ASUS ROG Strix SCAR 18">
+        <h3>MacBook Pro 14</h3>
+        <button class="btn" onclick="showPage('harga', document.querySelector('nav a:nth-child(2)'))">Lihat Harga</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- HARGA -->
+  <section id="harga">
+    <h2>Daftar Harga Laptop</h2>
+    <table>
+      <tr>
+        <th>Jenis Laptop</th>
+        <th>Spesifikasi Singkat</th>
+        <th>Harga</th>
+      </tr>
+      <tr>
+        <td>MacBook Air 13</td>
+        <td>13 inci, M2, 16 GB, 2024</td>
+        <td>Rp13.599.000</td>
+      </tr>
+      <tr>
+        <td>MacBook Air 15</td>
+        <td>15 inci, M3, 8 GB</td>
+        <td>Rp21.999.000</td>
+      </tr>
+      <tr>
+        <td>MacBook Pro 14</td>
+        <td>14 inch, M4 Pro, 24GB</td>
+        <td>Rp33.999.000</td>
+      </tr>
+    </table>
+    <button class="btn-back" onclick="showPage('beranda', document.querySelector('nav a:first-child'))">🔙 Kembali ke Beranda</button>
+  </section>
+
+  <!-- PROFIL -->
+  <section id="profil">
+    <h2>Profil Penjual</h2>
+    <p><b>Aini MacBook Store</b></p>
+    <p>Didirikan pada tahun 2025, Aini MacBook Store adalah toko yang berpengalaman dalam menjual berbagai laptop berkualitas dengan harga bersaing. Kami berkomitmen memberikan pelayanan terbaik untuk pelanggan kami.</p>
+    <button class="btn-back" onclick="showPage('beranda', document.querySelector('nav a:first-child'))">🔙 Kembali ke Beranda</button>
+  </section>
+
+  <!-- ALAMAT -->
+  <section id="alamat">
+    <h2>Alamat Toko</h2>
+    <p>📍 Jl. STM No.12B, Sitirejo II, Kec. Medan Amplas, Kota Medan, Sumatera Utara </p>
+    <p>📞 0812-3456-7890</p>
+    <p>🕒 Buka: Senin - Sabtu (09.00 - 18.00)</p>
+    <div class="map">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.159985326015!2d98.688246975813!3d3.5505672505522132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3031306fd6d4356b%3A0x3a595989553e73!2sJl.%20STM%20No.12%20B%2C%20Sitirejo%20II%2C%20Kec.%20Medan%20Amplas%2C%20Kota%20Medan%2C%20Sumatera%20Utara%2020219!5e0!3m2!1sid!2sid!4v1761118964933!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>>/iframe>" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></https:>" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></src=>" allowfullscreen="" loading="lazy"></iframe>
+</div>
+    <button class="btn-back" onclick="showPage('beranda', document.querySelector('nav a:first-child'))">🔙 Kembali ke Beranda</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Aini MacBook Store | E-Commerce Laptop Online</p>
+  </footer>
+
+  <script>
+    function showPage(pageId, element) {
+      // sembunyikan semua section
+      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+      // tampilkan section yang diklik
+      document.getElementById(pageId).classList.add('active');
+
+      // ubah navbar aktif
+      document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+      if (element) element.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
